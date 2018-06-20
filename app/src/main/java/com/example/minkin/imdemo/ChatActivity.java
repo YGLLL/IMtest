@@ -52,7 +52,7 @@ public class ChatActivity extends AppCompatActivity {
         MessageInfo messageInfo = new MessageInfo();
         messageInfo.setContent("你好，欢迎使用Rance的聊天界面框架");
         messageInfo.setType(Constants.CHAT_ITEM_TYPE_LEFT);
-        messageInfo.setHeader("http://tupian.enterdesk.com/2014/mxy/11/2/1/12.jpg");
+        messageInfo.setHeader("http://img5.imgtn.bdimg.com/it/u=3272996903,1322252932&fm=27&gp=0.jpg");
         mData.add(messageInfo);
 
         MessageInfo messageInfo1 = new MessageInfo();
@@ -60,20 +60,20 @@ public class ChatActivity extends AppCompatActivity {
         messageInfo1.setVoiceTime(3000);
         messageInfo1.setType(Constants.CHAT_ITEM_TYPE_RIGHT);
         messageInfo1.setSendState(Constants.CHAT_ITEM_SEND_SUCCESS);
-        messageInfo1.setHeader("http://img.dongqiudi.com/uploads/avatar/2014/10/20/8MCTb0WBFG_thumb_1413805282863.jpg");
+        messageInfo1.setHeader("http://img1.imgtn.bdimg.com/it/u=2990245782,3572280809&fm=27&gp=0.jpg");
         mData.add(messageInfo1);
 
         MessageInfo messageInfo2 = new MessageInfo();
         messageInfo2.setImageUrl("http://img4.imgtn.bdimg.com/it/u=1800788429,176707229&fm=21&gp=0.jpg");
         messageInfo2.setType(Constants.CHAT_ITEM_TYPE_LEFT);
-        messageInfo2.setHeader("http://tupian.enterdesk.com/2014/mxy/11/2/1/12.jpg");
+        messageInfo2.setHeader("http://img5.imgtn.bdimg.com/it/u=3272996903,1322252932&fm=27&gp=0.jpg");
         mData.add(messageInfo2);
 
         MessageInfo messageInfo3 = new MessageInfo();
         messageInfo3.setContent("[微笑][色][色][色]");
         messageInfo3.setType(Constants.CHAT_ITEM_TYPE_RIGHT);
         messageInfo3.setSendState(Constants.CHAT_ITEM_SEND_ERROR);
-        messageInfo3.setHeader("http://img.dongqiudi.com/uploads/avatar/2014/10/20/8MCTb0WBFG_thumb_1413805282863.jpg");
+        messageInfo3.setHeader("http://img1.imgtn.bdimg.com/it/u=2990245782,3572280809&fm=27&gp=0.jpg");
         mData.add(messageInfo3);
     }
 
