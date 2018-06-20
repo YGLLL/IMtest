@@ -7,10 +7,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.minkin.imdemo.R;
 import com.example.minkin.imdemo.adapter.ChatAdapter;
 import com.example.minkin.imdemo.enity.MessageInfo;
 import com.example.minkin.imdemo.util.Utils;
+import com.example.minkin.imdemo.weiget.BubbleImageView;
+import com.example.minkin.imdemo.weiget.GifTextView;
 import com.jude.easyrecyclerview.adapter.BaseViewHolder;
 
 import butterknife.BindView;
@@ -26,10 +29,10 @@ public class ChatAcceptViewHolder extends BaseViewHolder<MessageInfo> {
     TextView chatItemDate;
     @BindView(R.id.chat_item_header)
     ImageView chatItemHeader;
-//    @BindView(R.id.chat_item_content_text)
-//    GifTextView chatItemContentText;
-//    @BindView(R.id.chat_item_content_image)
-//    BubbleImageView chatItemContentImage;
+    @BindView(R.id.chat_item_content_text)
+    GifTextView chatItemContentText;
+    @BindView(R.id.chat_item_content_image)
+    BubbleImageView chatItemContentImage;
     @BindView(R.id.chat_item_voice)
     ImageView chatItemVoice;
     @BindView(R.id.chat_item_layout_content)
@@ -49,7 +52,7 @@ public class ChatAcceptViewHolder extends BaseViewHolder<MessageInfo> {
     @Override
     public void setData(MessageInfo data) {
         chatItemDate.setText(data.getTime() != null ? data.getTime() : "");
-//        Glide.with(getContext()).load(data.getHeader()).into(chatItemHeader);
+        Glide.with(getContext()).load(data.getHeader()).into(chatItemHeader);
         chatItemHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,31 +60,31 @@ public class ChatAcceptViewHolder extends BaseViewHolder<MessageInfo> {
             }
         });
         if (data.getContent() != null) {
-//            chatItemContentText.setSpanText(handler, data.getContent(), true);
+            chatItemContentText.setSpanText(handler, data.getContent(), true);
             chatItemVoice.setVisibility(View.GONE);
-//            chatItemContentText.setVisibility(View.VISIBLE);
+            chatItemContentText.setVisibility(View.VISIBLE);
             chatItemLayoutContent.setVisibility(View.VISIBLE);
             chatItemVoiceTime.setVisibility(View.GONE);
-//            chatItemContentImage.setVisibility(View.GONE);
+            chatItemContentImage.setVisibility(View.GONE);
         } else if (data.getImageUrl() != null) {
             chatItemVoice.setVisibility(View.GONE);
             chatItemLayoutContent.setVisibility(View.GONE);
             chatItemVoiceTime.setVisibility(View.GONE);
-//            chatItemContentText.setVisibility(View.GONE);
-//            chatItemContentImage.setVisibility(View.VISIBLE);
-//            Glide.with(getContext()).load(data.getImageUrl()).into(chatItemContentImage);
-//            chatItemContentImage.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    onItemClickListener.onImageClick(chatItemContentImage, getDataPosition());
-//                }
-//            });
+            chatItemContentText.setVisibility(View.GONE);
+            chatItemContentImage.setVisibility(View.VISIBLE);
+            Glide.with(getContext()).load(data.getImageUrl()).into(chatItemContentImage);
+            chatItemContentImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onItemClickListener.onImageClick(chatItemContentImage, getDataPosition());
+                }
+            });
         } else if (data.getFilepath() != null) {
             chatItemVoice.setVisibility(View.VISIBLE);
             chatItemLayoutContent.setVisibility(View.VISIBLE);
-//            chatItemContentText.setVisibility(View.GONE);
+            chatItemContentText.setVisibility(View.GONE);
             chatItemVoiceTime.setVisibility(View.VISIBLE);
-//            chatItemContentImage.setVisibility(View.GONE);
+            chatItemContentImage.setVisibility(View.GONE);
             chatItemVoiceTime.setText(Utils.formatTime(data.getVoiceTime()));
             chatItemLayoutContent.setOnClickListener(new View.OnClickListener() {
                 @Override
