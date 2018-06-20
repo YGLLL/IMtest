@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.example.minkin.imdemo.adapter.holder.ChatAcceptViewHolder;
 import com.example.minkin.imdemo.adapter.holder.ChatSendViewHolder;
+import com.example.minkin.imdemo.adapter.holder.ConversationTimeViewHolder;
 import com.example.minkin.imdemo.enity.MessageInfo;
 import com.example.minkin.imdemo.util.Constants;
 import com.jude.easyrecyclerview.adapter.BaseViewHolder;
@@ -40,6 +41,9 @@ public class ChatAdapter extends RecyclerArrayAdapter<MessageInfo> {
                 break;
             case Constants.CHAT_ITEM_TYPE_RIGHT:
                 viewHolder = new ChatSendViewHolder(parent, onItemClickListener, handler);
+                break;
+            case Constants.NEW_CONVERSATION_TIME:
+                viewHolder=new ConversationTimeViewHolder(parent);
                 break;
         }
         return viewHolder;

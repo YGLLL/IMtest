@@ -15,6 +15,9 @@ import android.widget.ImageView;
 
 import com.example.minkin.imdemo.R;
 
+/**
+ * 自定义聊天气泡图片
+ */
 public class BubbleImageView extends AppCompatImageView {
     private BubbleDrawable bubbleDrawable;
     private Drawable sourceDrawable;

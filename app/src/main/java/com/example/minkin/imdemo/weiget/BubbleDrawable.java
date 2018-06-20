@@ -14,6 +14,9 @@ import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 
+/**
+ * 自定义聊天气泡drawable
+ */
 public class BubbleDrawable extends Drawable {
     private RectF mRect;
     private Path mPath = new Path();

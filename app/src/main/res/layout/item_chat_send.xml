@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/chat_item_header"
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -49,7 +49,7 @@
                 android:gravity="right|center_vertical"
                 android:orientation="horizontal"
                 android:padding="5dp"
-                android:background="@color/colorPrimary">
+                android:background="@mipmap/chatto_bg_normal">
 
                 <com.example.minkin.imdemo.weiget.GifTextView
                     android:id="@+id/chat_item_content_text"
