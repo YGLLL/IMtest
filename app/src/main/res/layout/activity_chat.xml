@@ -6,14 +6,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.jude.easyrecyclerview.EasyRecyclerView
-        android:id="@+id/erv"
+    <com.example.minkin.imdemo.weiget.refreshlayout.RefreshLayout
+        android:id="@+id/refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/white">
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/erv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-    </com.jude.easyrecyclerview.EasyRecyclerView>
+            android:background="@color/white">
+
+        </com.jude.easyrecyclerview.EasyRecyclerView>
+    </com.example.minkin.imdemo.weiget.refreshlayout.RefreshLayout>
 
     <include
         layout="@layout/include_reply_layout"

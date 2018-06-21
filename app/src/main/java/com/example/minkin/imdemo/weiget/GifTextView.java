@@ -21,6 +21,9 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * 可以显示表情的textview
+ */
 public class GifTextView extends AppCompatTextView {
     /**
      * 注：如果获取的gif帧与帧之间的时间间隔都不相同，建议调个固定的，最好的方法是将gif图的间隔设置相同

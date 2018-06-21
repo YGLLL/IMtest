@@ -5,15 +5,36 @@
     android:gravity="center_vertical"
     android:orientation="horizontal">
     <EditText
-        android:id="@+id/et"
-        android:layout_width="wrap_content"
+        android:id="@+id/reply_et"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:maxLines="1"
-        android:layout_margin="5dp"/>
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/send"/>
+        android:background="@drawable/corners_edit_white"
+        android:maxLines="3"
+        android:minHeight="36dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="5dp"
+        android:clickable="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <com.example.minkin.imdemo.weiget.StateButton
+        android:id="@+id/emotion_send"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:padding="1dp"
+        android:text="@string/send"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:normalBackgroundColor="@color/colorPrimary"
+        app:pressedBackgroundColor="@color/colorPrimaryDark"
+        app:radius="5dp" />
 </LinearLayout>

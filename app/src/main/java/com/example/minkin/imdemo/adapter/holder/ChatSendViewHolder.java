@@ -20,13 +20,14 @@ import com.jude.easyrecyclerview.adapter.BaseViewHolder;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ChatSendViewHolder extends BaseViewHolder<MessageInfo> {
 
     @BindView(R.id.chat_item_date)
     TextView chatItemDate;
     @BindView(R.id.chat_item_header)
-    ImageView chatItemHeader;
+    CircleImageView chatItemHeader;
     @BindView(R.id.chat_item_content_text)
     GifTextView chatItemContentText;
     @BindView(R.id.chat_item_content_image)

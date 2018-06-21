@@ -11,4 +11,7 @@ public class Constants {
     public static final int CHAT_ITEM_SENDING = 0x003;
     public static final int CHAT_ITEM_SEND_ERROR = 0x004;
     public static final int CHAT_ITEM_SEND_SUCCESS = 0x005;
+
+    //默认加载一页的消息数
+    public static final int DEFAULT_PAGE_SIZE=30;
 }
