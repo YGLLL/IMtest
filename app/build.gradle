@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.minkin.imdemo"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -37,5 +37,8 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
     //eventbus,用于组件间通信，网址:https://github.com/greenrobot/EventBus/
-    api 'org.greenrobot:eventbus:3.1.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+//    //图片选择框架，https://github.com/smuyyh/ImageSelector
+//    implementation 'com.yuyh.imgsel:library:2.0.3'
 }
